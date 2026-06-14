@@ -97,7 +97,7 @@ def update_battle_stats(table: str, result: str):
     if result == "B":
         stats["banker_total"] += 1
 stats["current_streak"] = stats["current_streak"] + 1 if stats["last_result"] == "B" else 1
-        stats["banker_streak"] = max(stats["banker_streak"], stats["current_streak"])
+    stats["banker_streak"] = max(stats["banker_streak"], stats["current_streak"])
         stats["last_result"] = "B"
     elif result == "P":
         stats["player_total"] += 1
